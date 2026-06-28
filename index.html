@@ -8,12 +8,42 @@
   
 <body>
   
+  <p id="last-update">Letztes Update am ...</p>
+
   <p>Dieser Ort widmet sich einem neuen Verständnis der Psychologie.</p>
-  <p> Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich brachte dafür im Dorf Werbung an. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich nie mehr etwas Peinliches mehr zu machen. Im 12 Lebensjahr dachte ich: "nur noch 4 Jahre und ich werde das erste Mal Sex haben." Ich wusste, dass man in der Schweiz mit 16 Jahren legal Sex haben durfte.</p>
+  <p> Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich brachte dafür im Dorf Werbung an. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich nie[...]</p>
       <p>Ich entwickle täglich neue Ansichten. Was auch immer hier gezeigt wird, ich werde es morgen schon als ungültig empfinden.</p>
 
   
   <a href="page2.html">Seite 2</a>
    <a href="page3.html">Seite 3</a>
+
+  <script>
+  (function(){
+    var el = document.getElementById('last-update');
+    if(!el) return;
+    var owner = 'idioskosmos';
+    var repo = 'idioskosmos';
+    // Hole das neueste Commit aus dem Repository und zeige das Datum an.
+    fetch('https://api.github.com/repos/' + owner + '/' + repo + '/commits?per_page=1')
+      .then(function(res){ if(!res.ok) throw new Error('network'); return res.json(); })
+      .then(function(data){
+        if(!Array.isArray(data) || data.length === 0){
+          el.textContent = 'Letztes Update am unbekannt';
+          return;
+        }
+        var commit = data[0].commit;
+        var dateStr = (commit && commit.committer && commit.committer.date) || (commit && commit.author && commit.author.date) || null;
+        if(!dateStr){ el.textContent = 'Letztes Update am unbekannt'; return; }
+        var date = new Date(dateStr);
+        // Format: TT.MM.JJJJ
+        var day = String(date.getDate()).padStart(2,'0');
+        var month = String(date.getMonth()+1).padStart(2,'0');
+        var year = date.getFullYear();
+        el.textContent = 'Letztes Update am ' + day + '.' + month + '.' + year;
+      })
+      .catch(function(){ el.textContent = 'Letztes Update am unbekannt'; });
+  })();
+  </script>
 </body>
 </html>
