@@ -51,33 +51,19 @@
   <h1>Blog</h1>
 
   <div class="blog-entry">
-    <div class="blog-date"></div>
+    <div class="blog-date">29.06.2026 - 14:30</div>
     <div class="blog-content">
       <p>Schreibe hier deinen ersten Blog-Eintrag...</p>
     </div>
   </div>
 
   <div class="blog-entry">
-    <div class="blog-date"></div>
+    <div class="blog-date">28.06.2026 - 10:15</div>
     <div class="blog-content">
-      <p>Dies ist der zweite Blog-Eintrag. Kopiere den gesamten &lt;div class="blog-entry"&gt; Block, um einen neuen Eintrag anzulegen — das Datum wird automatisch beim Laden der Seite gesetzt.</p>
+      <p>Dies ist der zweite Blog-Eintrag. Kopiere den gesamten &lt;div class="blog-entry"&gt; Block, um einen neuen Eintrag anzulegen.</p>
     </div>
   </div>
 
   <a href="index.html">← Zurück zur Startseite</a>
-
-  <script>
-    // Füllt alle Elemente mit der Klasse .blog-date mit dem aktuellen Datum und der Zeit im deutschen Format.
-    (function fillBlogDates() {
-      const now = new Date();
-      const dateStr = now.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' })
-        + ' - ' + now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-
-      document.querySelectorAll('.blog-date').forEach(el => {
-        // Falls ein Datum bereits gesetzt ist, überschreiben wir es — so bleibt es immer aktuell beim Kopieren.
-        el.textContent = dateStr;
-      });
-    })();
-  </script>
 </body>
 </html>
