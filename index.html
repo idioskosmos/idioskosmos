@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Idioskosmos</title>
+  <style>
+    /* thin vertical pink line on the right, full height, non-interactive */
+    body::after{
+      content: "";
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 2px;               /* change to make it thinner/thicker */
+      background: #ff69b4;      /* pink — change color if you like */
+      pointer-events: none;     /* doesn't block clicks */
+      z-index: 9999;
+    }
+    /* ensure no default margins create gaps */
+    html, body { height: 100%; margin: 0; }
+  </style>
 </head>
   
 <body>
@@ -13,7 +29,8 @@
 
   
   
-  <p> Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich machte dafür Werbung im Dorf. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich, nie wieder etwas Peinliches zu tun.
+  
+  <p> Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich machte dafür Werbung im Dorf. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich, nie wi[...]</p>
  <p>
   <p> Im Idios Kosmos bin ich mal ich, mal Fiktion. Bin ich Maske. Jede Darstellung könnte von einer Kunstfigur, könnte von mir persönlich stammen. Es verschwimmt.</p>
   
@@ -28,8 +45,8 @@
   <p>Was auch immer hier dargestellt wird; ich werde es morgen schon als ungültig empfinden.</p>
 
   
+  
  
-
   <script>
     // Zeigt nur das Datum der letzten Änderung an (deutsches Datumsformat)
     (function() {
