@@ -1,1 +1,97 @@
+html, body {
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  font-family: Georgia, serif;
+}
 
+/* Blog / Archiv */
+
+.idios-blog {
+  margin-top: 70px;
+  max-width: 900px;
+}
+
+.idios-entry {
+  margin-bottom: 70px;
+}
+
+.idios-entry-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.idios-entry-box {
+  border: 2px solid #4d6f57;
+  padding: 22px;
+}
+
+.idios-entry-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Rahmenfarben ruhig */
+
+.gruen .idios-entry-box {
+  border-color: #4d6f57;
+}
+
+.blau .idios-entry-box {
+  border-color: #466d9e;
+}
+
+.bordeaux .idios-entry-box {
+  border-color: #8a3f4d;
+}
+
+.ocker .idios-entry-box {
+  border-color: #9d8a45;
+}
+
+.petrol .idios-entry-box {
+  border-color: #26706f;
+}
+
+.grau .idios-entry-box {
+  border-color: #666666;
+}
+
+/* Rahmenfarben knallig */
+
+.pink .idios-entry-box {
+  border-color: #ff1493;
+}
+
+.neonpink .idios-entry-box {
+  border-color: #ff00aa;
+}
+
+.orange .idios-entry-box {
+  border-color: #ff6a00;
+}
+
+.gelb .idios-entry-box {
+  border-color: #ffd400;
+}
+
+.knallblau .idios-entry-box {
+  border-color: #0057ff;
+}
+
+.neongruen .idios-entry-box {
+  border-color: #39ff14;
+}
+
+.violett .idios-entry-box {
+  border-color: #8f00ff;
+}
+
+.rot .idios-entry-box {
+  border-color: #ff0033;
+}
