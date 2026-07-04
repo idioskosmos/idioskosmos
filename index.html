@@ -1,139 +1,152 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Idioskosmos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-    }
+<title>Idioskosmos</title>
 
-    .idios-blog {
-      margin-top: 60px;
-      max-width: 800px;
-    }
+<style>
+html, body {
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+  font-family: Georgia, serif;
+}
 
-    .idios-entry {
-      position: relative;
-      border: 2px solid #2f6f5e;
-      padding: 14px 18px 22px 18px;
-      margin-bottom: 40px;
-      min-height: 260px;
-    }
+/* Blog / Archiv */
+.idios-blog {
+  margin-top: 70px;
+  max-width: 900px;
+}
 
-    .idios-entry-header {
-      display: flex;
-      gap: 40px;
-      padding-right: 70px;
-      border-bottom: 1px solid #2f6f5e;
-      margin-bottom: 18px;
-      font-size: 1.1em;
-    }
+.idios-entry {
+  margin-bottom: 70px;
+}
 
-    .idios-entry-number {
-      position: absolute;
-      top: 12px;
-      right: 18px;
-      font-size: 1.2em;
-    }
+.idios-entry-meta {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
 
-    .idios-entry-content img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-top: 10px;
-    }
-  </style>
+.idios-entry-box {
+  border: 2px solid #4d6f57;
+  padding: 22px;
+}
+
+.idios-entry-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
 
-  <p>Letzte Änderung: <span id="lastModifiedDate"></span></p>
+<p>Letzte Änderung: <span id="lastModifiedDate"></span></p>
 
-  <p>Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich machte dafür Werbung im Dorf. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich, nie wieder etwas Peinliches zu tun.</p>
+<p>Als ich 10 Jahre alt war, wollte ich einen Trottinett-Club gründen. Ich machte dafür Werbung im Dorf. Ein älteres Kind lachte mich dafür aus. Ich schämte mich und entschied mich, nie wieder etwas Peinliches zu tun.</p>
 
-  <p>Im Idios Kosmos bin ich mal ich, mal Fiktion. Bin ich Maske. Jede Darstellung könnte von einer Kunstfigur, könnte von mir persönlich stammen. Es verschwimmt.</p>
+<p>Im Idios Kosmos bin ich mal ich, mal Fiktion. Bin ich Maske. Jede Darstellung könnte von einer Kunstfigur, könnte von mir persönlich stammen. Es verschwimmt.</p>
 
-  <nav>
-    <a href="ueber-den-idios-kosmos.html">Über den Idios Kosmos</a><br>
-    <a href="liebesgeschichte.html">Eine Liebesgeschichte</a><br>
-    <a href="kurze-liebesgeschichte.html">Eine kurze Liebesgeschichte</a><br>
-    <a href="liebesbrief-an-l.html">Liebesbrief an L.</a><br>
-    <a href="liebesbrief-an-a.html">Liebesbrief an A.</a><br>
-    <a href="vorwort.html">Vorwort</a><br>
-    <a href="blog.html">Blog</a>
-  </nav>
+<nav>
+  <a href="ueber-den-idios-kosmos.html">Über den Idios Kosmos</a><br>
+  <a href="liebesgeschichte.html">Eine Liebesgeschichte</a><br>
+  <a href="kurze-liebesgeschichte.html">Eine kurze Liebesgeschichte</a><br>
+  <a href="liebesbrief-an-l.html">Liebesbrief an L.</a><br>
+  <a href="liebesbrief-an-a.html">Liebesbrief an A.</a><br>
+  <a href="vorwort.html">Vorwort</a><br>
+  <a href="blog.html">Blog</a>
+</nav>
 
-  <p>Was auch immer hier dargestellt wird; ich werde es morgen schon als ungültig empfinden.</p>
+<p>Was auch immer hier dargestellt wird; ich werde es morgen schon als ungültig empfinden.</p>
 
-  <section class="idios-blog">
+<section class="idios-blog">
 
+  <article class="idios-entry">
 
-    <article class="idios-entry">
-  <div class="idios-entry-meta">
-    <span>Idios Kosmos</span>
-    <span>DATUM</span>
-    <span>#2</span>
-  </div>
+    <div class="idios-entry-meta">
+      <span>04.07.2026</span>
+      <span>#001</span>
+    </div>
 
-  <div class="idios-entry-box">
-    <p>Neuer Text.</p>
+    <div class="idios-entry-box">
 
-    <img src="bilder/dein-neues-bild.jpg" alt="">
-  </div>
-</article>
+      <p>Hier steht dein Text.</p>
 
-    <article class="idios-entry">
-      <div class="idios-entry-header">
-        <strong>Idios Kosmos</strong>
-        <span>11.07.2026</span>
-      </div>
+      <img src="bilder/baloon-cut.jpg" alt="">
 
-      <div class="idios-entry-number">#2</div>
+    </div>
 
-      <div class="idios-entry-content">
-        <p>Neuer Text.</p>
-      </div>
-    </article>
+  </article>
 
+  <!--
+  ======================================================
+  Neuen Eintrag hier kopieren, Datum / Nummer / Text / Bild ändern.
+  Falls kein Bild gewünscht ist, die img-Zeile löschen.
+  ======================================================
 
-  </section>
+  <article class="idios-entry">
 
-  <script>
-    (function() {
-      var lm = document.lastModified;
-      var dateStr = lm ? new Date(lm).toLocaleDateString('de-DE') : new Date().toLocaleDateString('de-DE');
-      var el = document.getElementById('lastModifiedDate');
-      if (el) el.textContent = dateStr;
-    })();
-  </script>
+    <div class="idios-entry-meta">
+      <span>11.07.2026</span>
+      <span>#002</span>
+    </div>
 
-  <div style="position:fixed;right:12px;bottom:12px;z-index:10000">
-    <a id="random-link" href="#" onclick="randomJump(); return false;" style="background:#000;color:#fff;padding:8px 10px;border-radius:4px;text-decoration:none;font-size:14px;">Zufällige Seite</a>
-  </div>
+    <div class="idios-entry-box">
 
-  <script>
-  (function(){
-    const fallback = ['/', '/index.html', '/about.html'];
-    function randomJump(){
-      try{
-        const anchors = Array.from(document.querySelectorAll('a[href]'))
-          .map(a => a.getAttribute('href'))
-          .filter(h => h && !h.startsWith('http') && !h.startsWith('#'));
-        const pool = anchors.length ? anchors : fallback;
-        const choice = pool[Math.floor(Math.random()*pool.length)];
-        location.href = new URL(choice, location.href).href;
-      }catch(e){
-        location.href = fallback[Math.floor(Math.random()*fallback.length)];
-      }
+      <p>Neuer Text.</p>
+
+      <img src="bilder/neues-bild.jpg" alt="">
+
+    </div>
+
+  </article>
+
+  -->
+
+</section>
+
+<script>
+(function() {
+  var lm = document.lastModified;
+  var dateStr = lm ? new Date(lm).toLocaleDateString('de-DE') : new Date().toLocaleDateString('de-DE');
+  var el = document.getElementById('lastModifiedDate');
+  if (el) el.textContent = dateStr;
+})();
+</script>
+
+<div style="position:fixed;right:12px;bottom:12px;z-index:10000">
+  <a id="random-link" href="#" onclick="randomJump(); return false;" style="background:#000;color:#fff;padding:8px 10px;border-radius:4px;text-decoration:none;font-size:14px;">Zufällige Seite</a>
+</div>
+
+<script>
+(function(){
+  const fallback = ['/', '/index.html', '/about.html'];
+
+  function randomJump(){
+    try{
+      const anchors = Array.from(document.querySelectorAll('a[href]'))
+        .map(a => a.getAttribute('href'))
+        .filter(h => h && !h.startsWith('http') && !h.startsWith('#'));
+
+      const pool = anchors.length ? anchors : fallback;
+      const choice = pool[Math.floor(Math.random() * pool.length)];
+
+      location.href = new URL(choice, location.href).href;
+    } catch(e) {
+      location.href = fallback[Math.floor(Math.random() * fallback.length)];
     }
-    window.randomJump = randomJump;
-  })();
-  </script>
+  }
+
+  window.randomJump = randomJump;
+})();
+</script>
 
 </body>
 </html>
