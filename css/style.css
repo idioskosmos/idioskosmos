@@ -30,10 +30,12 @@ html, body {
 }
 
 .idios-entry-box img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
+ display: block;
+width: 75%;
+    max-width: 700px;
+    height: auto;
+    margin: 20px auto 0 auto;
+
 }
 
 /* Rahmenfarben ruhig */
