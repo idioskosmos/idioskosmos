@@ -37,61 +37,40 @@ html, body {
 }
 
 /* Rahmenfarben ruhig */
+/* ===== Rahmenfarben ===== */
 
-.gruen .idios-entry-box {
-  border-color: #4d6f57;
-}
+.a .idios-entry-box { border-color:#4d6f57; }   /* dunkles Grün */
+.b .idios-entry-box { border-color:#466d9e; }   /* Stahlblau */
+.c .idios-entry-box { border-color:#8a3f4d; }   /* Bordeaux */
+.d .idios-entry-box { border-color:#9d8a45; }   /* Ocker */
+.e .idios-entry-box { border-color:#26706f; }   /* Petrol */
+.f .idios-entry-box { border-color:#666666; }   /* Grau */
 
-.blau .idios-entry-box {
-  border-color: #466d9e;
-}
+.g .idios-entry-box { border-color:#ff1493; }   /* Pink */
+.h .idios-entry-box { border-color:#ff6a00; }   /* Orange */
+.i .idios-entry-box { border-color:#ffd400; }   /* Gelb */
+.j .idios-entry-box { border-color:#0057ff; }   /* Knallblau */
+.k .idios-entry-box { border-color:#39ff14; }   /* Neongrün */
+.l .idios-entry-box { border-color:#8f00ff; }   /* Violett */
 
-.bordeaux .idios-entry-box {
-  border-color: #8a3f4d;
-}
+.m .idios-entry-box { border-color:#ff0033; }   /* Rot */
+.n .idios-entry-box { border-color:#00d4ff; }   /* Cyan */
+.o .idios-entry-box { border-color:#00b894; }   /* Türkis */
+.p .idios-entry-box { border-color:#c0392b; }   /* Ziegelrot */
+.q .idios-entry-box { border-color:#6c5ce7; }   /* Lila */
+.r .idios-entry-box { border-color:#e17055; }   /* Koralle */
 
-.ocker .idios-entry-box {
-  border-color: #9d8a45;
-}
+.s .idios-entry-box { border-color:#2d3436; }   /* Anthrazit */
+.t .idios-entry-box { border-color:#b8860b; }   /* Goldbraun */
+.u .idios-entry-box { border-color:#7f8c8d; }   /* Schiefer */
+.v .idios-entry-box { border-color:#d81b60; }   /* Magenta */
+.w .idios-entry-box { border-color:#1abc9c; }   /* Aquamarin */
+.x .idios-entry-box { border-color:#e67e22; }   /* Mandarine */
 
-.petrol .idios-entry-box {
-  border-color: #26706f;
-}
+.y .idios-entry-box { border-color:#9b59b6; }   /* Lavendel */
+.z .idios-entry-box { border-color:#2ecc71; }   /* Smaragd */
 
-.grau .idios-entry-box {
-  border-color: #666666;
-}
 
-/* Rahmenfarben knallig */
 
-.pink .idios-entry-box {
-  border-color: #ff1493;
-}
 
-.neonpink .idios-entry-box {
-  border-color: #ff00aa;
-}
 
-.orange .idios-entry-box {
-  border-color: #ff6a00;
-}
-
-.gelb .idios-entry-box {
-  border-color: #ffd400;
-}
-
-.knallblau .idios-entry-box {
-  border-color: #0057ff;
-}
-
-.neongruen .idios-entry-box {
-  border-color: #39ff14;
-}
-
-.violett .idios-entry-box {
-  border-color: #8f00ff;
-}
-
-.rot .idios-entry-box {
-  border-color: #ff0033;
-}
