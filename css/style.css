@@ -7,7 +7,7 @@ html, body {
 
 /*index.html intro*/
 .intro {
-  min-height: 82vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
 }
