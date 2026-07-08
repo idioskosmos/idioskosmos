@@ -5,6 +5,17 @@ html, body {
   font-family: Georgia, serif;
 }
 
+/*index.html intro*/
+.intro {
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro p {
+  max-width: 680px;
+}
+
 /* Blog / Archiv */
 
 .idios-blog {
