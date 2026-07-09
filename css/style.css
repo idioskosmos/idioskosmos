@@ -7,22 +7,27 @@ html, body {
 
 /*index.html intro*/
 
+
+.intro {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro p {
+  max-width: 680px;
+  text-align: center;
+  margin: 0;
+}
+
 .intro-bild {
-  display: block;
   width: 180px;
   max-width: 45vw;
   height: auto;
-  margin: 40px auto 20px auto;
-}
-.intro {
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
+  margin-bottom: 24px;
 }
 
-.intro p {
-  max-width: 680px;
-}
 
 /* Blog / Archiv */
 
