@@ -18,6 +18,7 @@ html, body {
 .intro p {
   max-width: 680px;
   text-align: center;
+    margin-top: 20px;
   margin: 0;
 }
 
@@ -25,7 +26,6 @@ html, body {
   width: 180px;
   max-width: 45vw;
   height: auto;
-  margin-bottom: 24px;
 }
 
 
