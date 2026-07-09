@@ -6,6 +6,14 @@ html, body {
 }
 
 /*index.html intro*/
+
+.intro-bild {
+  display: block;
+  width: 180px;
+  max-width: 45vw;
+  height: auto;
+  margin: 40px auto 20px auto;
+}
 .intro {
   min-height: 75vh;
   display: flex;
