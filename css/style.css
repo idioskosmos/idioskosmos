@@ -29,6 +29,16 @@ html, body {
   margin-bottom: 24px;
 }
 
+/*Seiten */
+
+.seitenbild {
+    display: block;
+    width: 220px;
+    max-width: 60vw;
+    height: auto;
+    margin: 30px auto;
+}
+
 
 /* Blog / Archiv */
 
