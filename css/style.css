@@ -31,7 +31,17 @@ html, body {
 
 /*Seiten */
 
+.prosa {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
 
+.prosa p {
+    margin-bottom: 1.2em;
+    white-space: pre-wrap;
+}
 
 
 
