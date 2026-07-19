@@ -499,26 +499,18 @@ Dusk Owl Books, 2025, S. 186.
     
 </div>
 <script>
-(function(){
-  const fallback = ['/', '/index.html', '/about.html'];
+async function randomJump() {
+    try {
+        const response = await fetch("pages.json");
+        const pages = await response.json();
 
-  function randomJump(){
-    try{
-      const anchors = Array.from(document.querySelectorAll('a[href]'))
-        .map(a => a.getAttribute('href'))
-        .filter(h => h && !h.startsWith('http') && !h.startsWith('#'));
+        const randomPage = pages[Math.floor(Math.random() * pages.length)];
+        window.location.href = randomPage;
 
-      const pool = anchors.length ? anchors : fallback;
-      const choice = pool[Math.floor(Math.random() * pool.length)];
-
-      location.href = new URL(choice, location.href).href;
-    } catch(e) {
-      location.href = fallback[Math.floor(Math.random() * fallback.length)];
+    } catch (error) {
+        console.error("pages.json konnte nicht geladen werden.", error);
     }
-  }
-
-  window.randomJump = randomJump;
-})();
+}
 </script>
 </body>
 <div id="consent-banner" style="position:fixed;inset:0;background:rgba(255,255,255,0.96);z-index:99999;display:flex;align-items:center;justify-content:center;">
