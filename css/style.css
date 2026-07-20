@@ -106,6 +106,18 @@ html, body {
     outline-offset: 3px;
 }
 
+@media (max-width: 600px) {
+    .navbar {
+        gap: 7px;
+        margin: 14px auto 30px;
+    }
+
+    .navbar-button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+
 
 /* Video */
 
