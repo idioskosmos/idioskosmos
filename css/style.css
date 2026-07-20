@@ -84,7 +84,7 @@ html, body {
     margin-bottom: 40px;
 
     background: white;
-    border-bottom: 1px solid #ddd;
+    border-bottom: none;
 }
 
 .navbar-button {
