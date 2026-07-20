@@ -66,8 +66,16 @@ html, body {
 
 /* navbar */
 
-.navbar {
+#navbar {
     position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+
+.navbar {
+    position: fixed;
     top: 0;
     z-index: 1000;
 
