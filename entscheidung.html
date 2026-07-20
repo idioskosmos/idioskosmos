@@ -68,10 +68,10 @@
 <script>
 function acceptConsent() {
   document.getElementById('consent-banner').style.display = 'none';
-  localStorage.setItem('entscheidungConsentAccepted', 'true');
+  localStorage.setItem('zwischenstopConsentAccepted', 'true');
 }
 
-if (localStorage.getItem('entscheidungConsentAccepted') === 'true') {
+if (localStorage.getItem('zwischenstopConsentAccepted') === 'true') {
   document.getElementById('consent-banner').style.display = 'none';
 }
 </script>
