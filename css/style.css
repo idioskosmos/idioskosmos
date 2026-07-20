@@ -43,26 +43,9 @@ html, body {
     white-space: pre-wrap;
 }
 
-/* zurück oben leiste */
+/*Inhaltsverzeichnis */
 
-.top-nav {
-    position: relative;
-    width: 100vw;
-    min-height: 24px;
-    margin-left: calc(50% - 50vw);
-    margin-bottom: 2rem;
-}
-
-.nav-back {
-    position: absolute;
-    left: 20px;
-}
-
-.nav-home {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+.toc{background:#f9f9f9;border:1px solid #eee;padding:15px;margin-bottom:20px;}
 
 /* navbar */
 
