@@ -17,11 +17,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         initializeBackButton();
         initializeRandomPageButton();
         initializeChapterDropdown();
-        
+
     } catch (error) {
         console.error(error);
     }
 });
+
 
 function initializeBackButton() {
     const backButton = document.getElementById("back-button");
@@ -38,6 +39,7 @@ function initializeBackButton() {
         }
     });
 }
+
 
 function initializeRandomPageButton() {
     const randomButton = document.getElementById("random-page-button");
@@ -73,11 +75,15 @@ function initializeRandomPageButton() {
             );
 
             window.location.href = pageSelection[randomIndex];
+
         } catch (error) {
             console.error(error);
         }
     });
-    function initializeChapterDropdown() {
+}
+
+
+function initializeChapterDropdown() {
     const dropdownButton = document.querySelector(".navbar-dropdown-button");
     const dropdownContent = document.querySelector(".navbar-dropdown-content");
 
@@ -93,6 +99,4 @@ function initializeRandomPageButton() {
     document.addEventListener("click", () => {
         dropdownContent.classList.remove("show");
     });
-
-    
 }
