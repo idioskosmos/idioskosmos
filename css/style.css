@@ -139,7 +139,7 @@ html, body {
     background: #eee;
 }
 
-.navbar-dropdown:hover .navbar-dropdown-content {
+.navbar-dropdown-content.show {
     display: block;
 }
 
