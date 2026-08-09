@@ -112,6 +112,37 @@ html, body {
 }
 
 
+.navbar-dropdown {
+    position: relative;
+}
+
+.navbar-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 1000;
+}
+
+.navbar-dropdown-content a {
+    display: block;
+    padding: 8px 10px;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-dropdown-content a:hover {
+    background: #eee;
+}
+
+.navbar-dropdown:hover .navbar-dropdown-content {
+    display: block;
+}
+
 /* Video */
 
 .video-container {
