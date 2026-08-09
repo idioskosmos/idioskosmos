@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         initializeBackButton();
         initializeRandomPageButton();
+        initializeChapterDropdown();
+        
     } catch (error) {
         console.error(error);
     }
@@ -75,4 +77,22 @@ function initializeRandomPageButton() {
             console.error(error);
         }
     });
+    function initializeChapterDropdown() {
+    const dropdownButton = document.querySelector(".navbar-dropdown-button");
+    const dropdownContent = document.querySelector(".navbar-dropdown-content");
+
+    if (!dropdownButton || !dropdownContent) {
+        return;
+    }
+
+    dropdownButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        dropdownContent.classList.toggle("show");
+    });
+
+    document.addEventListener("click", () => {
+        dropdownContent.classList.remove("show");
+    });
+
+    
 }
