@@ -275,5 +275,31 @@ GESCHRIEBEN
   </article>
 
   <script src="js/navbar.js"></script>
+
+
+      <div id="consent-banner" style="position:fixed;inset:0;background:rgba(255,255,255,0.96);z-index:99999;display:flex;align-items:center;justify-content:center;">
+  <div style="max-width:420px;padding:24px;border:1px solid #000;background:#fff;font-family:inherit;">
+    <p>
+Vor vielen Jahren schrieb ich ein Buch. Ich nannte es “Vorwort”, denn ich schaffte es nie mit dem Schreiben des eigentlichen Buches zu beginnen. Es ist ein sehr peinliches Buch. Ich habe lange gebraucht mich dazu zu überwinden, es hier einzufügen. Aber ich will nichts verbergen. Ich empfehle aber, es nicht zu lesen. Es ist reine Zeitverschwendung.    
+    </p>
+
+    <button onclick="acceptConsent()" style="background:#000;color:#fff;padding:8px 14px;border:0;cursor:pointer;">
+      OK
+    </button>
+  </div>
+</div>
+
+<script>
+function acceptConsent() {
+  document.getElementById('consent-banner').style.display = 'none';
+  localStorage.setItem('entscheidungConsentAccepted', 'true');
+}
+
+if (localStorage.getItem('entscheidungConsentAccepted') === 'true') {
+  document.getElementById('consent-banner').style.display = 'none';
+}
+</script>
+
+  
 </body>
 </html>
