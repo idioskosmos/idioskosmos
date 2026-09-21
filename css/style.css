@@ -102,7 +102,9 @@ html, body {
 @media (max-width: 600px) {
     .navbar {
         gap: 7px;
-        margin: 14px auto 30px;
+        margin: 0;
+        padding: calc(10px + env(safe-area-inset-top)) 8px 10px;
+        box-sizing: border-box;
     }
 
     .navbar-button {
@@ -110,7 +112,6 @@ html, body {
         font-size: 13px;
     }
 }
-
 
 .navbar-dropdown {
     position: relative;
