@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -8,156 +7,231 @@
   <title>Kapitel 1</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    #passwort-schutz {
+      max-width: 400px;
+      margin: 100px auto;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    #passwort-schutz input {
+      padding: 10px;
+      font-family: inherit;
+      font-size: 16px;
+      margin: 15px 0;
+      width: 80%;
+      box-sizing: border-box;
+    }
+
+    #passwort-schutz button {
+      padding: 10px 25px;
+      font-family: inherit;
+      font-size: 16px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid black;
+      color: black;
+    }
+
+    #fehlermeldung {
+      color: red;
+      margin-top: 15px;
+    }
+
+    #inhalt {
+      display: none;
+    }
+  </style>
 </head>
-  
+
 <body>
- <div id="navbar"></div>
- 
 
+  <div id="navbar"></div>
 
-<h1>1. Kapitel</h1>
+  <!-- Passwortabfrage -->
+  <div id="passwort-schutz">
 
-  <p>Im ersten Kapitel will ich alles Unangenehme zeigen und hinter mir lassen.</p>
+    <p>Diese Seite ist passwortgeschützt. Abonniere den <a href="newsletter.html">Newsletter</a> und erhalte Zugriff. Das liegt daran, dass ich dieses erste Kapitel wirklich schlecht finde. Ich schäme mich dafür. Trotzdem muss ich es als erstes Kapitel drin lassen, weil es unheimlich stimmig ist. Diese kleine Hürde, soll lediglich dienen, dass nur Menschen, die sich wirklich interessieren Zugriff erhalten sollen. Zusätzlich habe ich derzeit kaum Newsletter-Abonennten (obschon ich schon sehr vielen von dieser Webseite erzählt habe) und ich wäre froh um weitere. </p>
 
-<p>Als Kind baute ich einen Roboter.</p>
+    <input
+      type="password"
+      id="passwort"
+      placeholder="Passwort eingeben"
+      onkeydown="if(event.key === 'Enter') pruefen()"
+    >
 
-  <img class="seitenbild"
-        src="screenshots/roboternetz_Post1.png"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-       alt="">
-  
-<p>Ich war ein Windsurfer.</p>
+    <br>
 
-<div class="video-container">
-    <iframe
+    <button type="button" onclick="pruefen()">
+      Öffnen
+    </button>
+
+    <p id="fehlermeldung" role="alert"></p>
+
+  </div>
+
+  <!-- Geschützter Seiteninhalt -->
+  <div id="inhalt">
+
+    <h1>1. Kapitel</h1>
+
+    <p>Wie gesagt. Dieses erste Kapitel ist mir äusserst unangenehm. Ich finde mich unsympathisch. Im ersten Kapitel will ich alles Unangenehme zeigen und hinter mir lassen.</p>
+
+    <p>Als Kind baute ich einen Roboter. (das finde ich noch gar nicht unangenehm)</p>
+
+    <img class="seitenbild"
+         src="screenshots/roboternetz_Post1.png"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
+
+    <p>Ich war ein Windsurfer.</p>
+
+    <div class="video-container">
+      <iframe
         src="https://www.youtube.com/embed/6gOcpIt1prE?start=235&end=281"
         title="Windsurf-Video"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
-    </iframe>
-</div>
+      </iframe>
+    </div>
 
-<p>Als Jugendlicher habe ich viel gesungen.</p>
+    <p>Als Jugendlicher habe ich viel gesungen. (das Bild hier ist mir unangenehm!)</p>
 
-   <img class="seitenbild"
-  src="screenshots/singend.png"        
-     loading="eager"
-        fetchpriority="high"
-        decoding="async"
-       alt="">
+    <img class="seitenbild"
+         src="screenshots/singend.png"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
 
-<p>
-Das Bild im Hintergrund ist ausgesprochen schön. Es ist von einem Landschaftsmaler gemalt, der nicht von Fotos malt, sondern sich tatsächlich in eine Landschaft setzt und sie abmalt. Es ist ein teures Bild. Ich befinde mich hier in der Wohnung von der Tochter des <a href="ueber-den-kuenstler.html">Künstlers</a>. Ich durfte die Wohnung einen Monat lang hüten,um auf die hauseigene Katze aufzupassen. Ausversehlich schlich die Katze morgens, als ich dabei war mich anzuziehen, unauffällig in den Kleiderschrank. Abends sprang sie mir entgegen. Ich war leider nicht mehr Jugendlich als ich gesungen habe (das Bild verbirgt es nicht), ich war schon etwas <a href="vom-aelter-werden.html">älter</a>.
-  
-</p>
+    <p>
+      Das Bild im Hintergrund ist ausgesprochen schön. Es ist von einem Landschaftsmaler gemalt, der nicht von Fotos malt, sondern sich tatsächlich in eine Landschaft setzt und sie abmalt. Es ist ein teures Bild. Ich befinde mich hier in der Wohnung von der Tochter des <a href="ueber-den-kuenstler.html">Künstlers</a>. Ich durfte die Wohnung einen Monat lang hüten,um auf die hauseigene Katze aufzupassen. Ausversehlich schlich die Katze morgens, als ich dabei war mich anzuziehen, unauffällig in den Kleiderschrank. Abends sprang sie mir entgegen. Ich war leider nicht mehr Jugendlich als ich gesungen habe (das Bild verbirgt es nicht), ich war schon etwas <a href="vom-aelter-werden.html">älter</a>.
+    </p>
 
-<p>Ich habe Theater gespielt.</p>
+    <p>Ich habe Theater gespielt. (ebenfalls unangenehm, also das Bild)</p>
 
- <img class="seitenbild"
-        src="screenshots/monolog-mit-feder-bearbeitet.jpg"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-       alt="">
+    <img class="seitenbild"
+         src="screenshots/monolog-mit-feder-bearbeitet.jpg"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
 
-  
+    <p>
+      Ich sprach bei Schauspielschulen vor (man sagt „Vorsprechen“, wenn man sich an
+      Schauspielschulen für einen Platz bewirbt. Normalerweise werden von 700–1000
+      Vorsprechenden nur 10 genommen. Die 10, die genommen werden, gelten in der
+      Vorsprech-Szene als extrem cool und sind es auch, denn es ist ihnen egal,
+      was die Menschen von ihnen denken. Sie sind locker.).
+    </p>
 
-<p>
-    Ich sprach bei Schauspielschulen vor (man sagt „Vorsprechen“, wenn man sich an
-    Schauspielschulen für einen Platz bewirbt. Normalerweise werden von 700–1000
-    Vorsprechenden nur 10 genommen. Die 10, die genommen werden, gelten in der
-    Vorsprech-Szene als extrem cool und sind es auch, denn es ist ihnen egal,
-    was die Menschen von ihnen denken. Sie sind locker.).
-</p>
-  <p>
-    Bei meinem allerersten Vorsprechen entschied ich mich für einen klassischen
-    Monolog von Friedrich Schiller, bei dem ich einen Herrn „Rattengift“ spielte.
-    Ich trug dazu eine enge Strumpfhose, eine klassische Weste und hielt eine grosse
-    Pfauenfeder in der Hand.
-</p>
+    <p>
+      Bei meinem allerersten Vorsprechen entschied ich mich für einen klassischen
+      Monolog von Friedrich Schiller, bei dem ich einen Herrn „Rattengift“ spielte.
+      Ich trug dazu eine enge Strumpfhose, eine klassische Weste und hielt eine grosse
+      Pfauenfeder in der Hand.
+    </p>
 
-<p>
-    Nach der Aufführung stellten mir die Prüfer folgende Frage:
-    „Haben Sie schon einmal ein Theaterstück oder einen Film geschaut?“
-    Sie sagten nichts weiter und warteten, bis ich begriff, dass es sich bei dieser
-    Frage nicht um eine Frage handelte. Aber auch nachdem ich begriff, sagten sie
-    nichts weiter und warteten, bis ich ohne Aufforderung den Prüfungsraum verlassen würde.
-</p>
+    <p>
+      Nach der Aufführung stellten mir die Prüfer folgende Frage:
+      „Haben Sie schon einmal ein Theaterstück oder einen Film geschaut?“
+      Sie sagten nichts weiter und warteten, bis ich begriff, dass es sich bei dieser
+      Frage nicht um eine Frage handelte. Aber auch nachdem ich begriff, sagten sie
+      nichts weiter und warteten, bis ich ohne Aufforderung den Prüfungsraum verlassen würde.
+    </p>
 
-<p>
-    <a href="vorwort.html">„Rattengift“</a> war ein erfolgloser Schriftsteller, der plötzlich die Idee hatte,
-    über seine Ideenlosigkeit zu schreiben, und überzeugt war, dass er dafür grossen
-    Ruhm ernten würde.
-</p>
+    <p>
+      <a href="vorwort.html">„Rattengift“</a> war ein erfolgloser Schriftsteller, der plötzlich die Idee hatte,
+      über seine Ideenlosigkeit zu schreiben, und überzeugt war, dass er dafür grossen
+      Ruhm ernten würde.
+    </p>
 
-<p>Ich habe <a href="ueber-die-technologie.html">Elektrotechnik</a> studiert.</p>
+    <p>Ich habe <a href="ueber-die-technologie.html">Elektrotechnik</a> studiert. (das finde ich wirklich endlos peinlich, erbärmlich! Warum würde man das tun? Die Erklärung die ich gleich im Anschluss liefere finde ich unzureichend.)</p>
 
-  <img class="seitenbild"
-        src="screenshots/eth-diplom.png"
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-       alt="">
+    <img class="seitenbild"
+         src="screenshots/eth-diplom.png"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
 
+    <p>
+      Es ist schon ziemlich peinlich, ein Diplom von sich ins Internet zu stellen.
+      Aber es ist nicht lange her, da hängte man Diplome bei sich zu Hause auf.
+      Warum dieses also nicht an den Anfang der Geschichte stellen?
+    </p>
 
-<p>
-    Es ist schon ziemlich peinlich, ein Diplom von sich ins Internet zu stellen.
-    Aber es ist nicht lange her, da hängte man Diplome bei sich zu Hause auf.
-    Warum dieses also nicht an den Anfang der Geschichte stellen?
-</p>
+    <p>
+      „An den Anfang der Geschichte“ klingt, als stehe eine lange Geschichte bevor.
+      Die Geschichte ist bereits fast zu Ende. Vielleicht auch nicht.
+      Aber ich fürchte mich davor. Das Risiko ist sehr gross.
+    </p>
 
-<p>
-    „An den Anfang der Geschichte“ klingt, als stehe eine lange Geschichte bevor.
-    Die Geschichte ist bereits fast zu Ende. Vielleicht auch nicht.
-    Aber ich fürchte mich davor. Das Risiko ist sehr gross.
-</p>
+    <p>Ich habe viel gemalt.</p>
 
-<p>Ich habe viel gemalt.</p>
-
-   <img class="seitenbild"
-     src="bilder/roter-ballon.jpg"
-     loading="eager"
-     fetchpriority="high"
-     decoding="async"
-     alt="">
+    <img class="seitenbild"
+         src="bilder/roter-ballon.jpg"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
 
     <p>Ich <a href="vom-goettlichen.html">liebe dieses Bild</a>. Ursprünglich war es so:</p>
 
-      <img class="seitenbild"
-     src="bilder/Baloon Cut.jpg"
-     loading="eager"
-     fetchpriority="high"
-     decoding="async"
-     alt="">
+    <img class="seitenbild"
+         src="bilder/Baloon Cut.jpg"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
 
     <p>Ich bin froh habe ich es übermalt.</p>
+ <p>
+      Zusätzlich studierte ich Philosophie, Geschichte und Psychologie. Ich will keine weiteren Diplome anfügen, das wäre übertrieben.
+      Ich bin ein Universalgelehrter. (Wow... natürlich ein Witz. Ein Schlechter... diese Klammerbemerkungen finden ich mühsam...)
+    </p>
 
-<p>
-    Zusätzlich studierte ich Philosophie, Geschichte und Psychologie. Ich will keine weiteren Diplome anfügen, das wäre übertrieben.
-    Ich bin ein Universalgelehrter.
-</p>
+    <p>
+      Es ist etwas widersprüchlich, dass ich so bemüht darum bin, meine Identität
+      zu verhüllen, wo die Leser dieser Webseite nur aus meinen besten Freunden
+      und meiner Familie bestehen. Vielleicht wird sich das noch ändern. Vielleicht nicht. Aber auch vor ihnen ist es mir lieber, dass meine Identität hier verhüllt bleibt.
+      Vielleicht sogar noch viel wichtiger als bei allen anderen. Denn ich bin der Meinung,
+      diese Webseite hat nur zum Teil mit mir persönlich zu tun. Sie würden auf eine falsche
+      Fährte gelockt werden. Ich weiss, das klingt widersprüchlich, wo man soeben lauter Fakten über mich gehört hat.
+      Wahrscheinlich wirkt es, als würde ich so tun wollen, als drehe ich mich nicht nur um mich.
+    </p>
 
-<p>
-    Es ist etwas widersprüchlich, dass ich so darum bemüht bin, meine Identität
-    zu verhüllen, wo die Leser dieser Webseite nur aus meinen besten Freunden
-    und meiner Familie bestehen. Vielleicht wird sich das noch ändern. Vielleicht nicht. Aber auch vor ihnen ist es mir lieber, dass meine Identität hier verhüllt bleibt.
-    Vielleicht sogar noch viel wichtiger als bei allen anderen. Denn ich bin der Meinung,
-    diese Webseite hat nur zum Teil mit mir persönlich zu tun. Sie würden auf eine falsche
-    Fährte gelockt werden. Ich weiss, das klingt widersprüchlich, wo man soeben lauter Fakten über mich gehört hat.
-    Wahrscheinlich wirkt es, als würde ich so tun wollen, als drehe ich mich nicht nur um mich.
-</p>
+    <p>
+      In diesem Kontext frage ich mich, ob es wirklich Sinn macht, pornografische
+      Inhalte auf dieser Webseite zu teilen. Alle wären unangenehm berührt.
+      Ich werde eine Warnung anzeigen, bevor es so weit ist, damit man noch wegklicken kann. Wer es nicht tut, ist selber Schuld.
+    </p>
 
-<p>
-    In diesem Kontext frage ich mich, ob es wirklich Sinn macht, pornografische
-    Inhalte auf dieser Webseite zu teilen. Alle wären unangenehm berührt.
-    Ich werde eine Warnung anzeigen, bevor es so weit ist, damit man noch wegklicken kann. Wer es nicht tut, ist selber Schuld.
-</p>
+    <a href="kapitel-2.html">Weiter zum 2. Kapitel</a>
 
-     <a href="kapitel-2.html">Weiter zum 2. Kapitel</a>
+  </div>
 
-  
-  <script src="js/navbar.js"></script></body>
+  <!-- Passwortprüfung -->
+  <script>
+    function pruefen() {
+      const eingabe = document.getElementById("passwort").value;
+      const fehlermeldung = document.getElementById("fehlermeldung");
+
+      if (eingabe === "Flugzeug") {
+        document.getElementById("passwort-schutz").style.display = "none";
+        document.getElementById("inhalt").style.display = "block";
+        fehlermeldung.textContent = "";
+      } else {
+        fehlermeldung.textContent = "Falsches Passwort.";
+      }
+    }
+  </script>
+
+  <script src="js/navbar.js"></script>
+
+</body>
 </html>
-
