@@ -52,7 +52,19 @@
 
   <!-- Passwortabfrage -->
   <div id="passwort-schutz">
-    <p>Diese Seite ist passwortgeschützt. Abonniere den <a href="newsletter.html">Newsletter</a> und erhalte Zugriff auf diese Seite. Viele Menschen abonnieren den Newsletter aus den unterschiedlichsten Gründen. Du musst nicht denken, dass ich denke, dass du den Newsletter nur abonnierst, um Zugriff auf diese Seite zu erhalten. Zudem habe ich bereits so viele Abonnenten, dass ich gar nicht merke, wenn jemand Neues dazukommt.</p>
+
+    <p>
+      Diese Seite ist passwortgeschützt.
+      Abonniere den
+      <a href="newsletter.html">Newsletter</a>
+      und erhalte Zugriff auf diese Seite.
+      Viele Menschen abonnieren den Newsletter aus den
+      unterschiedlichsten Gründen. Du musst nicht denken,
+      dass ich denke, dass du den Newsletter nur abonnierst,
+      um Zugriff auf diese Seite zu erhalten.
+      Zudem habe ich bereits so viele Abonnenten,
+      dass ich gar nicht merke, wenn jemand Neues dazukommt.
+    </p>
 
     <input
       type="password"
@@ -63,9 +75,12 @@
 
     <br>
 
-    <button onclick="pruefen()">Öffnen</button>
+    <button type="button" onclick="pruefen()">
+      Öffnen
+    </button>
 
-    <p id="fehlermeldung"></p>
+    <p id="fehlermeldung" role="alert"></p>
+
   </div>
 
   <!-- Geschützter Seiteninhalt -->
@@ -73,11 +88,44 @@
 
     <h1>Sex-Video</h1>
 
-    <img class="seitenbild"
-         src="screenshots/sex-video-screenshot.png"
-         loading="eager"
-         fetchpriority="high"
-         decoding="async"
-         alt="">
+    <img
+      class="seitenbild"
+      src="screenshots/sex-video-screenshot.png"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      alt=""
+    >
 
     <p>
+      Das Sex-Video, das ich hier hochladen wollte,
+      nutzt viel zu viel Speicher; die gesamte Webseite
+      würde dadurch lahm gelegt. Ich versuche dieses
+      Problem möglichst rasch zu lösen. Ich könnte es
+      auf einen externen Server (bspw. Youporn) laden,
+      aber das würde ich niemals machen. Ich habe einen
+      Screenshot von einem Ausschnitt des Sex-Videos gemacht.
+    </p>
+
+  </div>
+
+  <!-- Passwortprüfung -->
+  <script>
+    function pruefen() {
+      const eingabe = document.getElementById("passwort").value;
+      const fehlermeldung = document.getElementById("fehlermeldung");
+
+      if (eingabe === "Flugzeug") {
+        document.getElementById("passwort-schutz").style.display = "none";
+        document.getElementById("inhalt").style.display = "block";
+        fehlermeldung.textContent = "";
+      } else {
+        fehlermeldung.textContent = "Falsches Passwort.";
+      }
+    }
+  </script>
+
+  <script src="js/navbar.js"></script>
+
+</body>
+</html>
