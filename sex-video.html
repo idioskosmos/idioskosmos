@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 
@@ -8,25 +7,77 @@
   <title>Sex-Video</title>
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    #passwort-schutz {
+      max-width: 400px;
+      margin: 100px auto;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    #passwort-schutz input {
+      padding: 10px;
+      font-family: inherit;
+      font-size: 16px;
+      margin: 15px 0;
+      width: 80%;
+      box-sizing: border-box;
+    }
+
+    #passwort-schutz button {
+      padding: 10px 25px;
+      font-family: inherit;
+      font-size: 16px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid black;
+      color: black;
+    }
+
+    #fehlermeldung {
+      color: red;
+      margin-top: 15px;
+    }
+
+    #inhalt {
+      display: none;
+    }
+  </style>
 </head>
-  
+
 <body>
- <div id="navbar"></div>
- 
-<h1>Sex-Video</h1>
- 
-  
-    
 
-      <img class="seitenbild"
-     src="screenshots/sex-video-screenshot.png"
-     loading="eager"
-     fetchpriority="high"
-     decoding="async"
-     alt="">
+  <div id="navbar"></div>
 
-  <p>Das Sex-Video, das ich hier hochladen wollte, nutzt viel zu viel Speicher; die gesamte Webseite würde dadurch lahm gelegt. Ich versuche dieses Problem möglichst rasch zu lösen. Ich könnte es auf einen externen Server (bspw. Youporn) laden, aber das würde ich niemals machen. Ich habe einen Screenshot von einem Ausschnitt des Sex-Videos gemacht. </p>
+  <!-- Passwortabfrage -->
+  <div id="passwort-schutz">
+    <p>Diese Seite ist passwortgeschützt. Abonniere den Newsletter und erhalte Zugriff. Viele Menschen abonnieren den Newsletter aus den unterschiedlichsten Gründen. Du musst nicht denken, dass ich denke, dass du den Newsletter nur deswegen abonnierst damit du Zugriff auf diese Seite erhältst. Zudem habe ich bereits so viele Abonnenten, dass ich gar nicht merke, wenn jemand Neues dazukommt.</p>
 
-  
-  <script src="js/navbar.js"></script></body>
-</html>
+    <input
+      type="password"
+      id="passwort"
+      placeholder="Passwort eingeben"
+      onkeydown="if(event.key === 'Enter') pruefen()"
+    >
+
+    <br>
+
+    <button onclick="pruefen()">Öffnen</button>
+
+    <p id="fehlermeldung"></p>
+  </div>
+
+  <!-- Geschützter Seiteninhalt -->
+  <div id="inhalt">
+
+    <h1>Sex-Video</h1>
+
+    <img class="seitenbild"
+         src="screenshots/sex-video-screenshot.png"
+         loading="eager"
+         fetchpriority="high"
+         decoding="async"
+         alt="">
+
+    <p>
